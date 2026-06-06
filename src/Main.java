@@ -1,9 +1,10 @@
+import builder.BuilderClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testSingletonImplementation();
+        testBuilderImplementation();
     }
 
     private static void testSingletonImplementation() {
@@ -12,5 +13,10 @@ public class Main {
 
         client.setSingleton(Singleton.getInstance());
         client.printSingletonHash();
+    }
+
+    private static void testBuilderImplementation() {
+        BuilderClient client = new BuilderClient();
+        client.createRegularGamingDesktopAndPrint();
     }
 }
