@@ -1,10 +1,11 @@
 import builder.BuilderClient;
+import prototype.PrototypeClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testBuilderImplementation();
+        testPrototypeImplementation();
     }
 
     private static void testSingletonImplementation() {
@@ -18,5 +19,10 @@ public class Main {
     private static void testBuilderImplementation() {
         BuilderClient client = new BuilderClient();
         client.createRegularGamingDesktopAndPrint();
+    }
+
+    private static void testPrototypeImplementation() {
+        PrototypeClient client = new PrototypeClient();
+        client.clonePrototypeAndPrintEqualityTest();
     }
 }
