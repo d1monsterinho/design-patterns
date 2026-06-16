@@ -3,13 +3,19 @@ import adapter.EuPlug;
 import adapter.UsSocket;
 import adapter.UsSocketAdapter;
 import builder.BuilderClient;
+import decorator.DecoratorClient;
 import prototype.PrototypeClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testAdapterImplementation();
+        testDecoratorImplementation();
+    }
+
+    private static void testDecoratorImplementation() {
+        DecoratorClient client = new DecoratorClient();
+        client.composeAndPrintDecoratedPizza();
     }
 
     private static void testAdapterImplementation() {
