@@ -4,13 +4,19 @@ import adapter.UsSocket;
 import adapter.UsSocketAdapter;
 import builder.BuilderClient;
 import decorator.DecoratorClient;
+import flyweight.FlyweightClient;
 import prototype.PrototypeClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testDecoratorImplementation();
+        testFlyweightImplementation();
+    }
+
+    private static void testFlyweightImplementation() {
+        FlyweightClient client = new FlyweightClient();
+        client.moveCars();
     }
 
     private static void testDecoratorImplementation() {
