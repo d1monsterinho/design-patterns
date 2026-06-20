@@ -3,6 +3,7 @@ import adapter.EuPlug;
 import adapter.UsSocket;
 import adapter.UsSocketAdapter;
 import builder.BuilderClient;
+import chainofresponsibility.WebHandlerClient;
 import decorator.DecoratorClient;
 import flyweight.FlyweightClient;
 import prototype.PrototypeClient;
@@ -12,7 +13,12 @@ import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testProxyImplementation();
+        testCoRImplementation();
+    }
+
+    private static void testCoRImplementation() {
+        WebHandlerClient client = new WebHandlerClient();
+        client.auth();
     }
 
     private static void testProxyImplementation() {
