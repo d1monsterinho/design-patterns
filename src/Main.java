@@ -6,12 +6,18 @@ import builder.BuilderClient;
 import decorator.DecoratorClient;
 import flyweight.FlyweightClient;
 import prototype.PrototypeClient;
+import proxy.ProxyClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testFlyweightImplementation();
+        testProxyImplementation();
+    }
+
+    private static void testProxyImplementation() {
+        ProxyClient client = new ProxyClient();
+        client.renderCLStatsInfo();
     }
 
     private static void testFlyweightImplementation() {
