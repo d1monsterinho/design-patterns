@@ -4,6 +4,7 @@ import adapter.UsSocket;
 import adapter.UsSocketAdapter;
 import builder.BuilderClient;
 import chainofresponsibility.WebHandlerClient;
+import command.RepoClient;
 import decorator.DecoratorClient;
 import flyweight.FlyweightClient;
 import prototype.PrototypeClient;
@@ -13,7 +14,12 @@ import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
-        testCoRImplementation();
+        testCommandImplementation();
+    }
+
+    private static void testCommandImplementation() {
+        RepoClient client = new RepoClient();
+        client.makeCommitAndRevert();
     }
 
     private static void testCoRImplementation() {
