@@ -11,10 +11,16 @@ import prototype.PrototypeClient;
 import proxy.ProxyClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
+import strategy.LLMContextClient;
 
 public class Main {
     public static void main(String[] args) {
-        testCommandImplementation();
+        testStrategyImplementation();
+    }
+
+    private static void testStrategyImplementation() {
+        LLMContextClient client = new LLMContextClient();
+        client.generateLLMsResponses();
     }
 
     private static void testCommandImplementation() {
