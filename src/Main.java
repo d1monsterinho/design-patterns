@@ -12,10 +12,21 @@ import proxy.ProxyClient;
 import singleton.SingletonClient;
 import singleton.Singleton;
 import strategy.LLMContextClient;
+import templatemethod.DOCsMiner;
+import templatemethod.FileMiner;
+import templatemethod.PDFMiner;
 
 public class Main {
     public static void main(String[] args) {
-        testStrategyImplementation();
+        testTemplateMethodImplementation();
+    }
+
+    private static void testTemplateMethodImplementation() {
+        FileMiner pdfMiner = new PDFMiner();
+        pdfMiner.processFile("PDF file");
+
+        FileMiner docsMiner = new DOCsMiner();
+        docsMiner.processFile("DOCs file");
     }
 
     private static void testStrategyImplementation() {
